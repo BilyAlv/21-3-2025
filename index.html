@@ -111,11 +111,11 @@
     </div>
     
     <!-- Dos hojas como imágenes -->
-    <img src="/img/hoja.png" class="hoja-imagen hoja1" alt="Hoja de girasol 1">
-    <img src="/img/hoja2.png" class="hoja-imagen hoja2" alt="Hoja de girasol 2">
+    <img src="img/hoja.png" class="hoja-imagen hoja1" alt="Hoja de girasol 1">
+    <img src="img/hoja2.png" class="hoja-imagen hoja2" alt="Hoja de girasol 2">
     
     <div class="flor-container" id="flor-container">
-      <img src="/img/girasol.png" class="flor-imagen" alt="Flor de girasol">
+      <img src="img/girasol.png" class="flor-imagen" alt="Flor de girasol">
     </div>
   </div>
 
@@ -144,7 +144,7 @@
       const imagenFlor = document.querySelector('.flor-imagen');
       imagenFlor.onerror = function() {
         console.error('Error al cargar la imagen de la flor');
-        this.src = '/img/girasol.png';
+        this.src = 'img/girasol.png';
         this.alt = 'Imagen de girasol no disponible';
       };
       
@@ -153,7 +153,7 @@
       hojasImagenes.forEach(function(hoja) {
         hoja.onerror = function() {
           console.error('Error al cargar la imagen de la hoja');
-          this.src = '/img/hoja.png';
+          this.src = 'img/hoja.png';
           this.alt = 'Imagen de hoja no disponible';
         };
       });
