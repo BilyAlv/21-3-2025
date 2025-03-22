@@ -4,106 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Girasol Girando</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(to bottom, #87CEEB, #5F9EA0);
-      margin: 0;
-      overflow: hidden;
-    }
-
-    .container {
-      position: relative;
-      width: 400px;
-      height: 600px;
-      display: flex;
-      justify-content: center;
-    }
-
-    /* Tallo principal */
-    .tallo {
-      position: absolute;
-      bottom: 0;
-      width: 20px;
-      height: 500px;
-      background: linear-gradient(to right, #2D4A09, #4F7D0E, #2D4A09);
-      border-radius: 5px;
-      z-index: 1;
-    }
-
-    /* Hojas como imágenes */
-    .hoja-imagen {
-      position: absolute;
-      z-index: 2;
-      width: 120px;
-      height: 80px;
-      transform-origin: left center;
-    }
-
-    .hoja1 {
-      bottom: 220px;
-      left: 316px; /* Comienza justo donde termina el tallo */
-      transform: scaleX(-1) rotate(-10deg); /* Voltear horizontalmente y rotar */
-    }
-
-    .hoja2 {
-      bottom: 200px;
-      left: 85px;
-      transform: rotate(5deg);
-    }
-
-    /* Área para la flor que girará */
-    .flor-container {
-      position: absolute;
-      top: 20px; /* Ajustado para que quede sobre el tallo */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      z-index: 3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: girar 15s linear infinite;
-      overflow: hidden;
-    }
-
-    .flor-imagen {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    @keyframes girar {
-      from { transform: translateX(-50%) rotate(0deg); }
-      to { transform: translateX(-50%) rotate(360deg); }
-    }
-
-    /* Detalles del tallo */
-    .detalle-tallo {
-      position: absolute;
-      background-color: #2a4507;
-      border-radius: 50%;
-      opacity: 0.6;
-    }
-
-    /* Suelo */
-    .suelo {
-      position: absolute;
-      bottom: -50px;
-      width: 600px;
-      height: 100px;
-      background: linear-gradient(to bottom, #8B4513, #654321);
-      border-radius: 50% 50% 0 0;
-      z-index: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a href="/21-2-2025/index.html">sssssS</a>
+  <div class="container">
+    <div class="suelo"></div>
+    <div class="tallo">
+      <!-- Detalles del tallo (generados por JavaScript) -->
+    </div>
+    
+    <!-- Dos hojas como imágenes -->
+    <img src="/img/hoja.png" class="hoja-imagen hoja1" alt="Hoja de girasol 1">
+    <img src="/img/hoja2.png" class="hoja-imagen hoja2" alt="Hoja de girasol 2">
+    
+    <div class="flor-container" id="flor-container">
+      <img src="/img/girasol.png" class="flor-imagen" alt="Flor de girasol">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
